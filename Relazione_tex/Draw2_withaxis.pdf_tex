@@ -1,0 +1,73 @@
+%% Creator: Inkscape inkscape 0.92.3, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'Draw2_withaxis.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{599.02721458bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.65820848)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{Draw2_withaxis.pdf}}%
+    \put(0.30733839,0.22242244){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.21325988\unitlength}\raggedright $\alpha$\end{minipage}}}%
+    \put(0.84585823,0.45){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.19679497\unitlength}\raggedright $\vartheta$\end{minipage}}}%
+    \put(0.87577685,0.09094907){\color[rgb]{0.16470588,0.20392157,0.56862745}\makebox(0,0)[lt]{\begin{minipage}{0.18817047\unitlength}\raggedright $x_1$\end{minipage}}}%
+    \put(0.8971132,0.19323892){\color[rgb]{0.16470588,0.20392157,0.56862745}\makebox(0,0)[lt]{\begin{minipage}{0.06664371\unitlength}\raggedright $y_1$\end{minipage}}}%
+    \put(0.77070823,0.23632194){\color[rgb]{0.16470588,0.20392157,0.56862745}\makebox(0,0)[lt]{\begin{minipage}{0.15445662\unitlength}\raggedright $z_1$\end{minipage}}}%
+    \put(0.25772578,0.2813251){\color[rgb]{0,0.90588235,0.18823529}\makebox(0,0)[lt]{\begin{minipage}{0.18817047\unitlength}\raggedright $x_0$\end{minipage}}}%
+    \put(0.32785352,0.34961572){\color[rgb]{0,0.90588235,0.18823529}\makebox(0,0)[lt]{\begin{minipage}{0.06664371\unitlength}\raggedright $y_0$\end{minipage}}}%
+    \put(0.28755885,0.42645201){\color[rgb]{0,0.90588235,0.18823529}\makebox(0,0)[lt]{\begin{minipage}{0.15445662\unitlength}\raggedright $z_0$\end{minipage}}}%
+    \put(0.9102748,0.09055705){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.08546075\unitlength}\raggedright $\equiv$\end{minipage}}}%
+    \put(0.94153661,0.08961062){\color[rgb]{0.90588235,0.11764706,0.14509804}\makebox(0,0)[lt]{\begin{minipage}{0.09290919\unitlength}\raggedright $x_2$\end{minipage}}}%
+    \put(0.88940759,0.14044953){\color[rgb]{0.90588235,0.11764706,0.14509804}\makebox(0,0)[lt]{\begin{minipage}{0.06664371\unitlength}\raggedright $y_2$\end{minipage}}}%
+    \put(0.85722453,0.22929328){\color[rgb]{0.90588235,0.11764706,0.14509804}\makebox(0,0)[lt]{\begin{minipage}{0.15445662\unitlength}\raggedright $z_2$\end{minipage}}}%
+    \put(0.25059,0.34927366){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.11198935\unitlength}\raggedright $O$\end{minipage}}}%
+    \put(0.925,0.62){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.33153277\unitlength}\raggedright $P$\end{minipage}}}%
+    \put(0.79445899,0.11420695){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.09424842\unitlength}\raggedright $A$\end{minipage}}}%
+  \end{picture}%
+\endgroup%

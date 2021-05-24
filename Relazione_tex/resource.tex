@@ -1,0 +1,75 @@
+
+\begin{table}[]
+	\centering
+	\begin{tabular}{l|c|c|c|c|c|c}
+		& \textit{gui} & \textit{keys} & \textit{compc} & \textit{comboard} & \textit{control} & \textit{state\_update} \\ \hline
+		\texttt{state\_pc}		              & r   &      & w     &          &         &               \\ \hline
+		\texttt{ref\_pc}             		  & r   & w    & r     &          &         &               \\ \hline
+		\texttt{par\_control\_pc}              & r   & w    & r     &          &         &               \\ \hline
+		\texttt{view }                         & r   & w    &       &          &         &               \\ \hline
+		\texttt{state\_buffer}                 &     &      & r     & w        &         &               \\ \hline
+		\texttt{ref\_buffer}                   &     &      & w     & r        &         &               \\ \hline 
+		\texttt{par\_control\_buffer}		  &     &      & w     & r        &         &               \\ \hline
+		\texttt{state\_board}                  &     &      &       & r        & r/w     & r/w           \\ \hline
+		\texttt{ref\_board}                    &     &      &       & w        & r       &               \\ \hline
+		\texttt{par\_control\_board}           &     &      &       & w        & r       &               \\ \hline
+		\texttt{dn}                            &     & w     &       &          & r/w     & r             \\ \hline
+		\texttt{par\_dn}                       & r   & w    &       &          & r       &               \\ \hline
+	\end{tabular}
+	\caption{Risorse condivise}
+	\label{tab:risorse_task}
+\end{table}
+
+Le strutture dati condivise sono tutte protette da mutex, e sono necessarie per lo scambio di informazioni tra i task. Sono inoltre state separate tra variabili lato pc, buffer e lato scheda. \`E possibile vedere il loro utilizzo da parte dei task nella tabella~\ref{tab:risorse_task} in cui si \`e specificato se un task legge tale struttura con \textit{r} read, o se la modifica con \textit{w} write.
+
+Gli elementi dentro la struttura \texttt{state\_pc} sono:
+\begin{itemize}
+	\item \texttt{alpha}, l'angolo in gradi del primo link
+	\item \texttt{theta}, l'angolo in gradi del secondo link
+	\item \texttt{voltage}, il voltaggio corrente dell'alimentazione del motore
+\end{itemize}
+Gli elementi dentro la struttura \texttt{state\_board} sono:
+\begin{itemize}
+	\item \texttt{CNT\_alpha}, la lettura dell'encoder riferito all'angolo del primo link
+	\item \texttt{CNT\_theta}, la lettura dell'encoder riferito all'angolo del secondo link
+	\item \texttt{CCR}, Capture and Compare Register utilizzato per settare il voltaggio del motore
+\end{itemize}
+Nelle structure \texttt{ref} ci sono:
+\begin{itemize}
+	\item \texttt{alpha}, riferimento per l'angolo del primo link
+	\item \texttt{theta}, riferimento per l'angolo del secondo link
+	\item \texttt{swingup}, specifica in che configurazione vogliamo il pendolo
+\end{itemize}
+Le strutture \texttt{par\_control} contengono i vari parametri del controllore, abbiamo quindi:
+\begin{itemize}
+	\item \texttt{up\_kp\_alpha}, costante proporzionale del controllore \textit{Up} su $\alpha$
+	\item \texttt{up\_kp\_theta}, costante proporzionale del controllore \textit{Up} su $\vartheta$
+	\item \texttt{up\_kd\_alpha}, costante derivativa del controllore \textit{Up} su $\alpha$
+	\item \texttt{up\_kd\_theta}, costante derivativa del controllore \textit{Up} su $\vartheta$
+	\item \texttt{down\_kp\_alpha}, costante proporzionale del controllore \textit{Down} su $\alpha$
+	\item \texttt{down\_kp\_alpha}, costante derivativa del controllore \textit{Down} su $\alpha$
+	\item \texttt{dpole\_ref}, polo per la generazione di riferimento
+	\item \texttt{ref\_gen\_num}, vettore contenente i coefficienti del numeratore della funzione di trasferimento del generatore di riferimento
+	\item \texttt{ref\_gen\_den}, vettore contenente i coefficienti del denominatore della funzione di trasferimento del generatore di riferimento
+\end{itemize}
+Nella struttura \texttt{view} si ha:
+\begin{itemize}
+	\item \texttt{lon}, angolo per la vista che descrive la longitudine, chiamato $\rho$ nella sezione~\ref{sez:interfaccia}
+	\item \texttt{lon}, angolo per la vista che descrive la latitudine, chiamato $\lambda$ nella sezione~\ref{sez:interfaccia}
+\end{itemize}
+Per quanto riguarda i disturbi e i rumori abbiamo due strutture. La prima \texttt{dn} contiene:
+\begin{itemize}
+	\item \texttt{kick}, segnala l'attivazione del disturbo
+	\item \texttt{dist}, forza applicata all'estremità del pendolo
+	\item \texttt{noise}, vettore di due termini contenente l'errore di lettura sui due angoli
+	\item \texttt{delay}, numero di campioni di ritardo nel controllo
+\end{itemize}
+La seconda \texttt{par\_dn} invece contiene:
+\begin{itemize}
+	\item \texttt{dist\_amp}, ampiezza della forza applicata all'estremità del pendolo
+	\item \texttt{noise\_amp}, ampiezza massima del rumore espressa in numero di passi dell'encoder
+\end{itemize}
+
+
+
+\FloatBarrier

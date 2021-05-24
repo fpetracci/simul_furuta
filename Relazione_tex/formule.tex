@@ -1,0 +1,63 @@
+
+\section{Formule Simone}
+\begin{math}\\
+T=\dfrac{1}{2} \left(2  L_{arm} l_p m_p \dot{\alpha } \dot{\theta } \cos (\theta ) + \left(J_0 + J_p\sin ^2(\theta )\right) \dot{\alpha }^2+ J_p \dot{\theta }^2\right)\\
+U=g l_p m_p (\cos(\theta) - 1)\\
+M(q)\ddot{q}+C(q,\dot{q})\dot{q}+N(q,\dot{q})=\tau\\
+q=\left( \begin{array}{cc}\alpha & \theta\\\end{array}\right)^{T}\\
+M(q)=\left(\begin{array}{cc}\dfrac{\partial^{2} T}{\partial \dot{\alpha }^{2} } & \dfrac{\partial^{2} T}{\partial \dot{\alpha } \partial \dot{\theta } }\\
+\dfrac{\partial^{2} T}{\partial \dot{\alpha } \partial \dot{\theta } } & \dfrac{\partial^{2} T}{\partial \dot{\theta }^{2} }\\
+\end{array}\right)=\left(\begin{array}{cc}
+J_0+J_p \sin ^2(\theta ) & L_{arm} l_p m_p \cos (\theta ) \\
+L_{arm} l_p m_p \cos (\theta ) & J_p \\
+\end{array}\right)\\
+C(q,\dot{q})= \dfrac{1}{2}\left(
+\begin{array}{cc}
+\dfrac{\partial M_{11}}{\partial \alpha}\dot{\alpha } + \dfrac{\partial M_{11}}{\partial \theta}\dot{\theta } &
+\dfrac{\partial M_{11}}{\partial \theta}\dot{\alpha } + (2 \dfrac{\partial M_{12}}{\partial \theta} - \dfrac{\partial M_{22}}{\partial \alpha})\dot{\theta } \\
+(2 \dfrac{\partial M_{21}}{\partial \alpha} - \dfrac{\partial M_{11}}{\partial \theta}) \dot{\alpha } + \dfrac{\partial M_{22}}{\partial \alpha} \dot{\theta } &
+\dfrac{\partial M_{22}}{\partial \alpha} \dot{\alpha } + \dfrac{\partial M_{22}}{\partial \theta} \dot{\theta }\\
+\end{array}\right) = \left(	\begin{array}{cc}\dfrac{1}{2} J_p \dot{\theta } \sin (2 \theta )& \dfrac{1}{2} J_p \dot{\alpha } \sin (2 \theta )-L_{arm} l_p m_p\dot{\theta } \sin (\theta ) \\
+-\dfrac{1}{2} J_p \dot{\alpha } \sin (2 \theta ) & 0 \\
+\end{array}
+\right)\\
+N(q,\dot{q})=\left(\begin{array}{c}b_{ma}\dot{\alpha } + \dfrac{\partial U}{\partial \alpha }\\
+b_p \dot{\theta } + \dfrac{\partial U}{\partial \theta }\\
+\end{array}\right)=\left(\begin{array}{c}
+b_{ma} \dot{\alpha }\\
+b_p \dot{\theta } -g l_p m_p \sin (\theta )\\
+\end{array}\right)\\
+\ddot{q}={M(q)}^{-1}(\tau-C(q,\dot{q})\dot{q}-N(q,\dot{q}))\\
+\left(\begin{array}{c}\ddot{\alpha}\\
+\ddot{\theta}\\
+\end{array}\right) ={\left(\begin{array}{cc}
+	J_0+J_p \sin ^2(\theta ) & L_{arm} l_p m_p \cos (\theta ) \\
+	L_{arm} l_p m_p \cos (\theta ) & J_p \\
+	\end{array}\right)}^{-1}\left(\left(\begin{array}{c}\tau_1\\\tau_2\\\end{array}\right)-\left(
+\begin{array}{cc}\dfrac{1}{2} J_p \dot{\theta } \sin (2 \theta )&\dfrac{1}{2} J_p \dot{\alpha } \sin (2 \theta )-L_{arm} l_p m_p\dot{\theta } \sin (\theta ) \\
+-\dfrac{1}{2} J_p \dot{\alpha } \sin (2 \theta ) & 0 \\
+\end{array}
+\right)\left( \begin{array}{c}\dot{\alpha}\\
+\dot{\theta}\\
+\end{array}\right)-\left(\begin{array}{c}
+b_{ma} \dot{\alpha }\\
+b_p \dot{\theta } -g l_p m_p \sin (\theta )\\
+\end{array}\right)\right)
+%	=\\=\left(\begin{array}{c}
+%		\dfrac{2 \dot{\theta } L_{arm} b_p \cos (\theta ) l_p m_p-2 g L_{arm} \sin
+%			(\theta ) \cos (\theta ) l_p^2 m_p^2+\dot{\alpha }^2 L_{arm} \sin (2 \theta )
+%			(-\cos (\theta )) J_p l_p m_p+2 \dot{\theta }^2 L_{arm} \sin (\theta ) J_p l_p
+%			m_p-2 \tau _2 L_{arm} \cos (\theta ) l_p m_p-2 \dot{\alpha } b_{ma} J_p-2
+%			\dot{\alpha } \dot{\theta } \sin (2 \theta ) J_p^2+2 \tau _1 J_p}{2
+%			\left(-L_{arm}^2 \cos ^2(\theta ) l_p^2 m_p^2+\sin ^2(\theta ) J_p^2+J_0
+%			J_p\right)} \\
+%		\dfrac{2 \dot{\alpha } L_{arm} b_{ma} \cos (\theta ) l_p m_p+2 \dot{\alpha }
+%			\dot{\theta } L_{arm} \sin (2 \theta ) \cos (\theta ) J_p l_p m_p-2 \tau _1
+%			L_{arm} \cos (\theta ) l_p m_p-2 \dot{\theta }^2 L_{arm}^2 \sin (\theta )
+%			\cos (\theta ) l_p^2 m_p^2-2 \dot{\theta } J_0 b_p-2 \dot{\theta } b_p \sin ^2(\theta )
+%			J_p+2 g \sin ^3(\theta ) J_p l_p m_p+2 g J_0 \sin (\theta ) l_p m_p+\dot{\alpha }^2 \sin
+%			(2 \theta ) \sin ^2(\theta ) J_p^2+\dot{\alpha }^2 J_0 \sin (2 \theta ) J_p+2 \tau _2
+%			\sin ^2(\theta ) J_p+2 J_0 \tau _2}{2 \left(-L_{arm}^2 \cos ^2(\theta ) l_p^2
+%			m_p^2+\sin ^2(\theta ) J_p^2+J_0 J_p\right)} \\
+%	\end{array}\right)
+\end{math}

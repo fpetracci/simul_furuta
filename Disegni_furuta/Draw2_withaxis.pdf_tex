@@ -1,0 +1,70 @@
+%% Creator: Inkscape inkscape 0.92.3, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'Draw2_withaxis.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{606.66556639bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.64992116)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{Draw2_withaxis.pdf}}%
+    \put(0.30346878,0.21962198){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.21057479\unitlength}\raggedright $\alpha$\end{minipage}}}%
+    \put(0.83192375,0.45603569){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.19431718\unitlength}\raggedright $\vartheta$\end{minipage}}}%
+    \put(0.8647502,0.08980395){\color[rgb]{0.16470588,0.20392157,0.56862745}\makebox(0,0)[lt]{\begin{minipage}{0.18580127\unitlength}\raggedright $x_1$\end{minipage}}}%
+    \put(0.8858179,0.1908059){\color[rgb]{0.16470588,0.20392157,0.56862745}\makebox(0,0)[lt]{\begin{minipage}{0.06580462\unitlength}\raggedright $y_1$\end{minipage}}}%
+    \put(0.75388797,0.2338939){\color[rgb]{0.16470588,0.20392157,0.56862745}\makebox(0,0)[lt]{\begin{minipage}{0.1525119\unitlength}\raggedright $z_1$\end{minipage}}}%
+    \put(0.25448083,0.27778301){\color[rgb]{0.91764706,0.90588235,0.18823529}\makebox(0,0)[lt]{\begin{minipage}{0.18580127\unitlength}\raggedright $x_0$\end{minipage}}}%
+    \put(0.32372562,0.34521381){\color[rgb]{0.91764706,0.90588235,0.18823529}\makebox(0,0)[lt]{\begin{minipage}{0.06580462\unitlength}\raggedright $y_0$\end{minipage}}}%
+    \put(0.28393827,0.42108268){\color[rgb]{0.91764706,0.90588235,0.18823529}\makebox(0,0)[lt]{\begin{minipage}{0.1525119\unitlength}\raggedright $z_0$\end{minipage}}}%
+    \put(0.89881379,0.08941687){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.08438474\unitlength}\raggedright $\equiv\end{minipage}}}%
+    \put(0.9422727,0.08902978){\color[rgb]{0.90588235,0.11764706,0.14509804}\makebox(0,0)[lt]{\begin{minipage}{0.0917394\unitlength}\raggedright $x_2$\end{minipage}}}%
+    \put(0.87820931,0.14470283){\color[rgb]{0.90588235,0.11764706,0.14509804}\makebox(0,0)[lt]{\begin{minipage}{0.06580462\unitlength}\raggedright $y_2$\end{minipage}}}%
+    \put(0.83931497,0.22640631){\color[rgb]{0.90588235,0.11764706,0.14509804}\makebox(0,0)[lt]{\begin{minipage}{0.1525119\unitlength}\raggedright $z_2$\end{minipage}}}%
+  \end{picture}%
+\endgroup%

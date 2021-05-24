@@ -1,0 +1,140 @@
+\documentclass[
+12pt, % Main document font size
+a4paper, % Paper type, use 'letterpaper' for US Letter paper
+oneside, % One page layout (no page indentation)
+%twoside, % Two page layout (page indentation for binding and different headers)
+%hidelinks, % Hide links like hyperref
+%headinclude,footinclude, % Extra spacing for the header and footer
+%BCOR5mm, % Binding correction
+]{article}
+
+
+
+%\setlength{\parindent}{0pt} %Modifica la dimensione dell'indentazione dei paragrafi
+
+
+
+%%%%% Packages
+\usepackage [italian]{babel}
+
+%per far chiudere e aprire " "
+\usepackage [autostyle, english = american]{csquotes}
+\MakeOuterQuote{"}
+
+\usepackage{hyphenat}
+\hyphenation{Fortran hy-phen-ation se-mi-auto-no-mo em-bed-ded} 
+%\allowhyphens
+
+\usepackage[section]{placeins} %Also one can consider the placeins package and the \FloatBarrier command that prevents figures from floating any further. If figures are supposed to remain in the section, one can load
+
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage{xcolor} %Colori Aggiuntiv
+\usepackage[colorlinks = true,
+	linkcolor = teal,
+	urlcolor  = blue,
+	citecolor = blue,
+	anchorcolor = blue]{hyperref} %Hyperref
+	
+\usepackage{url}
+
+%\usepackage{lipsum} %Crea dummy text
+
+\usepackage{amsmath,amssymb,amscd,amsfonts,amsthm,amsrefs} %Roba matematica
+\usepackage{mathtools}
+
+\usepackage{physics}
+
+\usepackage{siunitx} %database unita` di misura, \si{ \kg \per \second},  \SI{20}{ \kg \per \second}
+\sisetup{
+	round-mode          = places,
+	round-precision     = 2,
+}
+
+\usepackage{gensymb} %simboli extra, come \degree
+
+\usepackage{tikz}
+	\usetikzlibrary{shapes,arrows}
+	\tikzstyle{block} = [draw, fill=white, rectangle, 
+	minimum height=3em, minimum width=6em]
+	\tikzstyle{sum} = [draw, fill=white, circle, node distance=1cm]
+	\tikzstyle{input} = [coordinate]
+	\tikzstyle{output} = [coordinate]
+	\tikzstyle{pinstyle} = [pin edge={to-,thin,black}]
+	\usepackage{tikzscale}
+
+\usepackage{pgfplots}
+	\pgfplotsset{width=7cm,compat=1.14}
+	%\pgfplotsset{compat=newest} % Allows to place the legend below plot
+	\pgfplotsset{every minor tick/.append style={thin}}  % applies only to minor ticks,
+	\usepgfplotslibrary{units} % Allows to enter the units nicely
+	%\usepgfplotslibrary{external} 
+	%\tikzexternalize
+	%\tikzset{external/force remake}
+	\pgfkeys{/pgf/number format/.cd,1000 sep={\,}}
+
+\usepackage{afterpage}
+
+\usepackage{vmargin}
+\setmarginsrb  {25mm}  % left margin
+	{ 5mm}  % top margin
+	{25mm}  % right margin
+	{15mm}  % bottom margin
+	{10mm}  % head height
+	{15mm}  % head sep
+	{10mm}  % foot height
+	{15mm}  % foot sep
+
+\setpapersize{A4}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Comandi homebrewed
+\newcommand\blankpage{%
+	\null
+	\thispagestyle{empty}%
+	%\addtocounter{page}{-1}%
+	\newpage}
+%per creare pagine vuote
+
+\newcommand{\at}[2][]{#1|_{#2}} %Comando per le derivate calcolate nel punto. Esempio: \dv{\text{Im}T(j \omega)}{t} \at[\Big]{\omega = \omega_1}
+
+%% Comando per valori assoluti che scalano
+%\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+%\DeclarePairedDelimiter\norm{\lVert}{\rVert}%
+% Swap the definition of \abs* and \norm*, so that \abs
+% and \norm resizes the size of the brackets, and the 
+% starred version does not.
+\makeatletter
+\let\oldabs\abs
+\def\abs{\@ifstar{\oldabs}{\oldabs*}}
+%
+\let\oldnorm\norm
+\def\norm{\@ifstar{\oldnorm}{\oldnorm*}}
+\makeatother
+
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+%% Prova theorem
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\newenvironment{Proof}[1][Proof]{\begin{trivlist}
+		\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{definition}[1][Definition]{\begin{trivlist}
+		\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{example}[1][Example]{\begin{trivlist}
+		\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{remark}[1][Remark]{\begin{trivlist}
+		\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+
+%\newcommand{\qed}{\nobreak \ifvmode \relax \else
+%	\ifdim\lastskip<1.5em \hskip-\lastskip
+%	\hskip1.5em plus0em minus0.5em \fi \nobreak
+%	\vrule height0.75em width0.5em depth0.25em\fi}
+
+
+

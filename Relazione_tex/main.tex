@@ -1,0 +1,55 @@
+\input{structure.tex}
+\graphicspath{{./figs/}}
+\pgfplotsset{
+	table/search path={./figs},
+}
+
+\title{\normalfont{Simulazione e Controllo del Pendolo Inverso di Furuta}}
+\author{Francesco Petracci e Simone Silenzi} 
+
+
+\begin{document}
+
+\input{title.tex}
+ 
+\section{Introduzione}
+Questo progetto consiste nella simulazione dell'interazione real-time tra il pendolo inverso di Furuta, una scheda STM32F4 Discovery e un'interfaccia utente su pc. 
+
+L'applicazione finale \`e stata sviluppata in C sfruttando principalmente le librerie \textsc{Allegro} 4.4 e \textsc{pthread}. 
+Alcune funzioni sono state generate in modo automatico sfruttando l'Embedded Coder di \textsc{Matlab--Simulink}, programma attraverso il quale \`e stato sviluppato e convalidato il modello fisico del pendolo e il relativo controllo.
+
+Questo ha avuto come obbiettivo principale il poter portare e mantenere il pendolo in posizione verticale consentendo anche delle variazioni di orientazione. Un ulteriore sfida \`e stata rendere robusto il controllore sviluppato a vari disturbi quali rumori di misura, ritardi e piccole forze esterne.
+
+%\input{formule.tex}
+
+\section{Modello}
+\label{sez:modello}
+
+\section{Controllo}
+\label{sez:controllo}
+
+\section{Interfaccia}
+\input{interfaccia.tex}
+
+\section{Overview del codice}
+
+Il software \`e stato sviluppato in C usando principalmente \textsc{Allegro} 4.4, \textsc{pthread} e l'Embedded Coder di \textsc{Simulink--Matlab}. La cartella principale ha 3 principali sotto--cartelle: \textit{Matlab} contiene i file sviluppati per elaborare il modello fisico e i disegni dell'interfaccia, \textit{include} gli header del codice utilizzati e infine \textit{src} i file sorgenti. Una cartella aggiuntiva, \textit{build}, viene creata al momento della compilazione e contiene i file object e il file binario.
+
+Una parte dei file sorgenti e dei file header sono stati generati in modo automatico tramite l'utilizzo appunto dell'Embedded Coder. Questi sono stati contrassegnati ad inizio file da un'intestazione e sono stati inoltre descritti brevemente nella prima parte del file \texttt{main.c}.
+
+\subsection{Data structures}
+\input{resource.tex}
+
+\subsection{Task}
+\input{task.tex}
+\FloatBarrier
+
+\section{Test e Conclusioni}
+
+Avendo effettuato una ripartizione dei task su core distinti non \`e possibile effettuare un'analisi classica del $U_{lub}$. Dai dati raccolti, per\`o, si evince come questa separazione e il basso fattore di utilizzazione dei singoli task rendano fattibile la schedulazione: ci\`o si riflette su un esiguo numero di deadline miss.
+
+Il controllore finale \`e risultato adeguato a rumori di misura, a ritardi modesti e riesce a recuperare le posizioni desiderate dopo l'azione di piccole forze esterne. Andando a modificare i vari parametri \`e stato osservato che la variazione pi\`u critica \`e senz'altro il cambiamento del periodo del task di controllo. 
+Questo infatti ha al suo interno delle discretizzazioni del modello fisico e andando a cambiare tempo di campionamento le funzioni di trasferimento usate non sono pi\`u valide.
+
+	
+\end{document}
