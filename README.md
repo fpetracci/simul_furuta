@@ -14,3 +14,6 @@ To compile just run in the main folder:
 ## Launch
 To run the simulator you'll need su privileges are needed to create real-time threads:
 `sudo ./simul_furuta`
+
+## TO DO
+It remains to translate all the code and the final application in English!
