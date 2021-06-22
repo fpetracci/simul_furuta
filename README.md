@@ -4,11 +4,14 @@ The physics of the pendulum are based on the [Quanser Rotary Inverted Pendulum](
 
 ## Install dependecies
 It needs allegro 4.4, to install it:
+
 `sudo apt install liballegro4.4 liballegro4-dev allegro4-doc`
 
 ## Compile
 To compile just run in the main folder:
+
 `cmake CMakeLists.txt`
+
 `make`
 
 ## Launch
